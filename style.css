@@ -1,0 +1,97 @@
+     body {
+         background-color: #000;
+         color: #fff;
+         font-family: Arial, sans-serif;
+         text-align: center;
+         padding: 20px;
+     }
+
+     canvas {
+         background-color: #111;
+         display: block;
+         margin: 20px auto;
+         border: 2px solid #fff;
+     }
+
+     .control {
+         font-size: 1.2em;
+         margin-bottom: 10px;
+     }
+
+     .btn-container {
+         margin: 10px;
+     }
+
+     button {
+         padding: 10px 20px;
+         margin: 5px;
+         font-size: 1em;
+         cursor: pointer;
+     }
+
+     /* Modal styles */
+     #message-modal {
+         display: none;
+         position: fixed;
+         z-index: 100;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         overflow: auto;
+         background-color: rgba(0, 0, 0, 0.8);
+     }
+
+     #message-modal-content {
+         background-color: #222;
+         color: #fff;
+         margin: 15% auto;
+         padding: 20px;
+         border: 2px solid #fff;
+         width: 300px;
+     }
+
+     #message-modal-close {
+         background-color: #444;
+         color: white;
+         border: none;
+         padding: 10px;
+         cursor: pointer;
+         margin-top: 10px;
+     }
+
+     @media (max-width: 600px) {
+         canvas {
+             width: 95vw;
+             height: calc(95vw * 0.6);
+             /* maintain 3:2 aspect ratio */
+         }
+
+         .control {
+             font-size: 0.9rem;
+             padding: 0 10px;
+         }
+
+         button {
+             width: 90%;
+             margin: 5px auto;
+             display: block;
+             font-size: 1rem;
+         }
+     }
+
+     /* Tablet: screens between 601px and 1024px */
+     @media (min-width: 601px) and (max-width: 1024px) {
+         canvas {
+             width: 90vw;
+             height: calc(90vw * 0.6);
+         }
+
+         .control {
+             font-size: 1rem;
+         }
+
+         button {
+             font-size: 1rem;
+         }
+     }
