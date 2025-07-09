@@ -7,9 +7,21 @@ var restartBtn = document.getElementById("restart-btn");
 var animationId;
 var gameRunning = false;
 
+
+const player1 = prompt("Enter Player 1 name (left side):");
+const player2 = prompt("Enter Player 2 name (right side):");
+
+
+const name1 = player1 && player1.trim() !== "" ? player1.trim() : "Player Left";
+const name2 = player2 && player2.trim() !== "" ? player2.trim() : "Player Right";
+
+const controlText = `Control: ${name1} (W and S) | ${name2} (&uarr; and &darr;)`;
+document.getElementById("controlText").innerHTML = controlText;
+
+
 startBtn.addEventListener("click", function () {
   if (!gameRunning) {
-   
+
     gameRunning = true;
     loop();
   }
@@ -95,7 +107,7 @@ function update() {
     leftPaddleY += paddleSpeed;
   }
 
- 
+
   ballX += ballSpeedX;
   ballY += ballSpeedY;
   if (ballY - ballRadius < 0 || ballY + ballRadius > canvas.height) {
@@ -134,8 +146,8 @@ function update() {
 
 function playerWin(player) {
   var message = "Congratulations! " + player + " win!";
-  $("#message").text(message); 
-  $("#message-modal").modal("show"); 
+  $("#message").text(message);
+  $("#message-modal").modal("show");
   reset();
 }
 
@@ -147,7 +159,7 @@ function reset() {
 }
 
 function draw() {
-  
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = "#FFF";
@@ -156,7 +168,7 @@ function draw() {
   ctx.beginPath();
   ctx.moveTo(canvas.width / 2, 0);
   ctx.lineTo(canvas.width / 2, canvas.height);
-  ctx.strokeStyle = "#FFF"; 
+  ctx.strokeStyle = "#FFF";
   ctx.stroke();
   ctx.closePath();
 
