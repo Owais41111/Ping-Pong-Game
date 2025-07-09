@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ping Pong Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="icon" type="image/x-icon" href="Ej Logo.png">
+    <style>
+        canvas {
+            border: 1px solid black;
+
+        }
+
+        .container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .btn {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+
+        .control {
+            text-align: center;
+        }
+
+        canvas {
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="canvas" width="600" height="400"></canvas>
+    </div>
+    <div class="button">
+        <button id="start-btn" class="btn">Start</button>
+        <button id="pause-btn" class="btn">Pause</button>
+        <button id="restart-btn" class="btn">Restart</button>
+    </div>
+    <p class="control">Control: Player Left(W and S) | Player Right(↑ and ↓)</p>
+    <div class="modal" tabindex="-1" role="dialog" id="message-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h5 id="message"></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="message-modal-close" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
